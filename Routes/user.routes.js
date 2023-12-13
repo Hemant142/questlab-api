@@ -15,7 +15,7 @@ userRouter.get("/news", async (req, res) => {
     const news = await NewsModel.find();
     res.status(200).json({ "news": news });
   } catch (error) {
-    res.status(400).send({ error:" error.message "});
+    res.status(400).send({ error: error.message });
   }
 });
 

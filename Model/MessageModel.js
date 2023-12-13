@@ -1,11 +1,11 @@
 const mongoose  = require("mongoose");
 
-const messageModel=mongoose.Schema({
+const messageSchema=mongoose.Schema({
     text:{type : [String]},
     
 })
 
-const MessageModel = mongoose.model("message", messageModel);
+const MessageModel = mongoose.model("message", messageSchema);
 
 module.exports={
     MessageModel
