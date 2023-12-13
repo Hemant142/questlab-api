@@ -7,14 +7,13 @@ const app=express();
 app.use(cors())
 
 app.use(express.json())
-
-app.use(express.urlencoded({extended:false}))
+app.use("/users", userRouter);
 app.get("/",async(req,res)=>{
     res.setHeader("Content-type", "text/html")
     res.send("<h1>Welcome to the Model</h1>")
 })
 
-app.use("/users", userRouter);
+
 const PORT = process.env.PORT;
 app.listen(PORT, async () => {
   try {
